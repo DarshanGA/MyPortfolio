@@ -1,0 +1,18 @@
+//color pallet
+$color-p1: white;
+$color-p2: #141414;
+
+// body styling
+$body-bg: $color-p2;
+$body-color: $color-p1;
+$font-family-base: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+  sans-serif;
+$headings-font-weight: 700;
+
+// Accordion's bootstrap variable overiding
+$accordion-button-focus-box-shadow: none;
+$accordion-button-active-bg: $body-bg;
+$accordion-button-active-color: $body-color;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='red' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>") !default;
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='red' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>") !default;
+$accordion-border-color: none;

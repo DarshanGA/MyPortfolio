@@ -1,0 +1,31 @@
+%margin_text_alignment {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  @extend %margin_text_alignment;
+}
+
+.about-summary {
+  @extend %margin_text_alignment;
+  color: darkgray;
+  font-weight: bold;
+}
+
+.section-start {
+  border-top: 0.5rex solid white;
+}
+
+.custom-accordion-button {
+  font-weight: bold; /* Bold text */
+  font-size: 1.25rem;
+  text-decoration: underline; /* Underline */
+  text-decoration-color: red; /* Red underline */
+  text-underline-offset: 4px; /* Make underline sit lower */
+}
