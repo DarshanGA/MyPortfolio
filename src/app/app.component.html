@@ -28,7 +28,10 @@
         data-bs-parent="#acc_MainPageSections"
       >
         <div class="accordion-body">
-          <app-experience-timeline></app-experience-timeline>
+          <app-experience-timeline
+            [educExp]="educationExperience"
+            [workExp]="workExperience"
+          ></app-experience-timeline>
         </div>
       </div>
     </div>

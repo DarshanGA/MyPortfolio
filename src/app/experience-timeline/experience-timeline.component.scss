@@ -13,14 +13,14 @@ $smallScrRightContWidht: 92%;
 
 /* vertical line */
 .timeline-line {
-  width: 0.7rex;                       /* thickness */
-  background-color: #ffffff;        /* solid white */
+  width: 0.7rex; /* thickness */
+  background-color: #ffffff; /* solid white */
   top: 0;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
-  z-index: 0;                       /* behind items */
+  z-index: 0; /* behind items */
 }
 
 /* make sure items sit above the line */
@@ -29,41 +29,62 @@ $smallScrRightContWidht: 92%;
   z-index: 1;
 }
 
-.custom-timeline-cont{
-
+.custom-timeline-cont {
   position: relative;
   width: 50%;
 }
 
-.left-container{
-
+.left-container {
   left: 0%;
   width: 49%;
 }
 
-.right-container{
-
+.right-container {
   left: 51%;
 }
 
+%base-timeline-node {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  top: 32px;
+  z-index: 10;
+}
+.timeline-node-right {
+  @extend %base-timeline-node;
+  right: -9.6%;
+}
+
+.timeline-node-left {
+  @extend %base-timeline-node;
+  left: -9.6%;
+}
+
 /* Responsive: move the line to the right on small screens */
-/* Bootstrap md breakpoint = 768px. Adjust if you want different break. */
 @include media-breakpoint-down(lg) {
   .timeline-line {
-    left: calc(100% - 1rem); /* 2rem gap from the right edge — tweak as needed */
+    left: calc(
+      100% - 0.5%
+    ); /* 2rem gap from the right edge — tweak as needed */
     transform: none;
   }
 
+  .timeline-node-left {
+    left: calc(
+      100% - (-3.5%)
+    );;
+  }
+
   /* optional: reduce width on small screens */
-  .timeline-line { width: 0.5rex; }
+  .timeline-line {
+    width: 0.6rex;
+  }
 
-  .custom-timeline-cont{
-
+  .custom-timeline-cont {
     width: $smallScrRightContWidht;
   }
 
-  .right-container{
-
+  .right-container {
     left: 0%;
     width: $smallScrRightContWidht;
   }

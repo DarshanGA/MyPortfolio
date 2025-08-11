@@ -1,6 +1,7 @@
 //color pallet
 $color-p1: white;
 $color-p2: #141414;
+$color-p3: #343434;
 
 // body styling
 $body-bg: $color-p2;
@@ -18,4 +19,11 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 $accordion-border-color: none;
 $accordion-border-radius: none;
 
-$card-bg: white;
+// Custom Card styling as per need.
+$card-bg: $color-p3;
+$card-title-color: $color-p1;
+$card-subtitle-color: darkgray;
+
+// Custom styles for the list
+$list-group-bg:  $color-p3;
+$list-group-border-width: none;

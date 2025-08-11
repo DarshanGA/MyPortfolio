@@ -4,12 +4,35 @@
       <!-- The vertical line -->
       <div class="timeline-line position-absolute"></div>
 
-      <!-- Example items -->
-      <div class="custom-timeline-cont left-container mb-4">
-        <app-education-timeline-card></app-education-timeline-card>
+      @for(j of workExp; track j.orderId){
+
+      <div class="custom-timeline-cont right-container mb-4">
+        <img src="workExpTimeLineIcon.jpg" class="timeline-node-left" />
+        <app-work-experience-card
+          [companyName]="j.companyName"
+          [jobTitle]="j.designation"
+          [summary]="j.jobDescription"
+          [keyResponsibilities]="j.keyRespo"
+          [startDate]="j.startDate"
+          [endDate]="j.isCurrent ? 'PRESENT' : j.endDate"
+        ></app-work-experience-card>
       </div>
-      <div class="custom-timeline-cont right-container">
-        <app-work-experience-card></app-work-experience-card>
+      }
+
+      <div class="d-flex flex-column-reverse">
+        <!-- Education Timeline items -->
+        @for(i of educExp; track i.orderId){
+
+        <div class="custom-timeline-cont left-container mb-4">
+          <img src="educationExpTimeLineIcon.jpg" class="timeline-node-right" />
+          <app-education-timeline-card
+            [institutionName]="i.institution"
+            [educLevel]="i.education"
+            [year]="i.completionYear"
+            [brief]="i.brief"
+          ></app-education-timeline-card>
+        </div>
+        }
       </div>
     </div>
   </div>

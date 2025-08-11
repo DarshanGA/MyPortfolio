@@ -2,11 +2,60 @@
   "fullName": "Darshan G A",
   "jobTitle": "Software Development Engineer in Test (SDET)",
   "about": "I'm a SDET with 3+ years of experience in both manual and automation testing. Successfully contributed to the delivery of three high-quality software products for clients. Passionate about learning new technologies, leveraging them to optimize processes, and explore their real-world impact.",
-  "sectionTitles":[
+  "sectionTitles": [
     "Experience and Education Timeline",
     "Technical Skils",
     "Certifications",
     "Personal Projects",
     "Hobbies"
-  ]
+  ],
+  "educationAndExperience": {
+    "educationExp": [
+      {
+        "orderId": 1,
+        "education": "High School | SSLC | 10th",
+        "institution": "Priya English School - Gubbi",
+        "completionYear": "August 2016",
+        "brief": "Sample brief text about SSLC, secondary school leaving certificate."
+      },
+      {
+        "orderId": 2,
+        "education": "Pre-University | PUC | 2nd PUC",
+        "institution": "Vijay PU College - Jaynagar",
+        "completionYear": "August 2018",
+        "brief": "Sample brief text about Pre-University Cources education."
+      },
+      {
+        "orderId": 3,
+        "education": "Bachlor of Engineering in Computer Science | BE Cse | 10th",
+        "institution": "Channabasaveshwara Institute of Technology - Gubbi",
+        "completionYear": "July 2022",
+        "brief": "Brief text about engineering and what we did there."
+      }
+    ],
+    "workExp": [
+      {
+        "orderId": 1,
+        "companyName": "Hexaware Technologies - Chennai",
+        "designation": "Software Development Engineer in Test (SDET)",
+        "jobDescription": "Automation and manual testing",
+        "startDate": "March 2022",
+        "endDate": "",
+        "isCurrent": true,
+        "keyRespo": [
+          "Developed and maintained scalable C# Selenium automation scripts using MSTest and the Page Object Model (POM) framework to reduce manual testing efforts and improve test reusability.",
+          "Designed and initiated the development of a custom Playwright + TypeScript test automation framework to replace legacy Selenium setup, offering faster execution, better parallelism, and expanded test coverage.",
+          "Managed automation scripts using Git by following version control best practices, ensuring seamless team collaboration and smooth pipeline integration.",
+          "Collaborated with clients and BAs to translate functional requirements into comprehensive test scenarios and cases, improving test coverage.",
+          "Executed Smoke, Functional, and Regression tests across different sprint phases, contributing to consistent, on-time, and high-quality releases. ",
+          "Logged, tracked, and retested defects in Azure DevOps, helping reduce turnaround time and maintain application stability. ",
+          "Actively participated in daily stand-ups and scrums to align test activities with sprint goals and address blockers early.",
+          "Performed post-release validation in production to ensure application stability and a seamless user experience with successful deployment.",
+          "Queried and validated database entries to ensure data accuracy across different application phases and workflows.",
+          "Actively monitored application resources and backend workflows via Azure Portal during end-to-end testing."
+        ],
+        "keyContr": ["", ""]
+      }
+    ]
+  }
 }

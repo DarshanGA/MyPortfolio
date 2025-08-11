@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-education-timeline-card',
@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class EducationTimelineCardComponent {
 
+  @Input({required: true}) institutionName = "Placeholder Institute Name";
+  @Input({required: true}) educLevel = "Placeholder class";
+  @Input({required: true}) year = "Mon 0000";
+  @Input({required: true}) brief = "Some placeholder text for brief summary about this study and class."
 }
