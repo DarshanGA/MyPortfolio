@@ -1,22 +1,39 @@
-<div class="timeline-container">
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h5>2025</h5>
-        <p>Launched new AI-powered feature.</p>
+<section class="timeline-section">
+  <div class="container">
+    <div class="timeline position-relative">
+      <!-- The vertical line -->
+      <div class="timeline-line position-absolute"></div>
+
+      @for(j of workExp; track j.orderId){
+
+      <div class="custom-timeline-cont right-container mb-4">
+        <img src="workExpTimeLineIcon.jpg" class="timeline-node-left" />
+        <app-work-experience-card
+          [companyName]="j.companyName"
+          [jobTitle]="j.designation"
+          [summary]="j.jobDescription"
+          [keyResponsibilities]="j.keyRespo"
+          [startDate]="j.startDate"
+          [endDate]="j.isCurrent ? 'PRESENT' : j.endDate"
+        ></app-work-experience-card>
       </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h5>2023</h5>
-        <p>Expanded into 3 new markets.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h5>2020</h5>
-        <p>Reached 1 million users.</p>
+      }
+
+      <div class="d-flex flex-column-reverse">
+        <!-- Education Timeline items -->
+        @for(i of educExp; track i.orderId){
+
+        <div class="custom-timeline-cont left-container mb-4">
+          <img src="educationExpTimeLineIcon.jpg" class="timeline-node-right" />
+          <app-education-timeline-card
+            [institutionName]="i.institution"
+            [educLevel]="i.education"
+            [year]="i.completionYear"
+            [brief]="i.brief"
+          ></app-education-timeline-card>
+        </div>
+        }
       </div>
     </div>
   </div>
-</div>
+</section>

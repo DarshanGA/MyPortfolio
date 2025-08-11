@@ -1,8 +1,0 @@
-@import "custom-variables.bs";
-
-// 1. Required Bootstrap foundation
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";  // includes $gutters, $spacers, etc.
-@import "bootstrap/scss/maps";       // needed for breakpoints/grid
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";  // optional but most components need it

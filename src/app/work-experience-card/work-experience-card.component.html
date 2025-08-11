@@ -1,0 +1,29 @@
+<div class="card border-danger">
+  <div class="card-body">
+    <h5 class="card-title text-center mb-4">{{ companyName }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ jobTitle }}</h6>
+    <p class="card-text">
+      {{ summary }}
+    </p>
+    <ul class="list-group mb-2">
+      @for(i of sampleResponsCount; track $index){
+
+      <li class="list-group-item text-truncate">
+        - {{keyResponsibilities[$index]}}
+      </li>
+      }
+    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-8 text-start fw-bold text-danger">
+          <span> {{ startDate }} - {{ endDate }} </span>
+        </div>
+        <div class="col-4 text-end">
+          <button type="button" class="btn btn-outline-light fw-bold">
+            More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
