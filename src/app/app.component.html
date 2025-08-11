@@ -1,6 +1,11 @@
 <header>
-  <h1>{{ fullName }} - {{ jobTitle }}</h1>
+  <h1 #pageTitle>{{ fullName }} - {{ jobTitle }}</h1>
   <p class="about-summary">{{ aboutMe }}</p>
+  <nav #scrollNavbar class="navbar navbar-dark bg-dark fixed-top navbar-hidden">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">{{ fullName }}</span>
+    </div>
+  </nav>
 </header>
 <main>
   <div class="accordion" id="acc_MainPageSections">
@@ -23,9 +28,7 @@
         data-bs-parent="#acc_MainPageSections"
       >
         <div class="accordion-body">
-          <p>
-            Feature in DEV: This will show the education and experience timeline.
-          </p>
+          <app-experience-timeline></app-experience-timeline>
         </div>
       </div>
     </div>

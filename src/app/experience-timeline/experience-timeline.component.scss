@@ -1,42 +1,70 @@
-.timeline-container {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0;
-}
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+$smallScrRightContWidht: 92%;
 
 .timeline {
-  position: relative;
-  width: 2px;
-  background-color: #0d6efd; // Bootstrap primary color
-  display: flex;
-  flex-direction: column-reverse; // ✅ bottom-to-top order
-  align-items: center;
+  /* ensure this container grows with content */
+  min-height: 200px;
 }
 
+/* vertical line */
+.timeline-line {
+  width: 0.7rex;                       /* thickness */
+  background-color: #ffffff;        /* solid white */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  z-index: 0;                       /* behind items */
+}
+
+/* make sure items sit above the line */
 .timeline-item {
   position: relative;
-  margin: 2rem 0;
-  
-  &:before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 3px solid #0d6efd;
-    border-radius: 50%;
-    z-index: 1;
-  }
+  z-index: 1;
 }
 
-.timeline-content {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-left: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  min-width: 200px;
+.custom-timeline-cont{
+
+  position: relative;
+  width: 50%;
+}
+
+.left-container{
+
+  left: 0%;
+  width: 49%;
+}
+
+.right-container{
+
+  left: 51%;
+}
+
+/* Responsive: move the line to the right on small screens */
+/* Bootstrap md breakpoint = 768px. Adjust if you want different break. */
+@include media-breakpoint-down(lg) {
+  .timeline-line {
+    left: calc(100% - 1rem); /* 2rem gap from the right edge — tweak as needed */
+    transform: none;
+  }
+
+  /* optional: reduce width on small screens */
+  .timeline-line { width: 0.5rex; }
+
+  .custom-timeline-cont{
+
+    width: $smallScrRightContWidht;
+  }
+
+  .right-container{
+
+    left: 0%;
+    width: $smallScrRightContWidht;
+  }
 }

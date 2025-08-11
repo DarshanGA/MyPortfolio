@@ -29,3 +29,14 @@ h1 {
   text-decoration-color: red; /* Red underline */
   text-underline-offset: 4px; /* Make underline sit lower */
 }
+
+.navbar-hidden {
+  transform: translateY(-100%);  /* move out of view upwards */
+  opacity: 0;                    /* fully transparent */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.navbar-visible {
+  transform: translateY(0);      /* slide into view */
+  opacity: 1;                    /* fully visible */
+}
