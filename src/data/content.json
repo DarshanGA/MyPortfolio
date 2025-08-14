@@ -15,31 +15,31 @@
         "orderId": 1,
         "education": "High School | SSLC | 10th",
         "institution": "Priya English School - Gubbi",
-        "completionYear": "August 2016",
+        "completionYear": "Aug 2016",
         "brief": "Sample brief text about SSLC, secondary school leaving certificate."
       },
       {
         "orderId": 2,
         "education": "Pre-University | PUC | 2nd PUC",
         "institution": "Vijay PU College - Jaynagar",
-        "completionYear": "August 2018",
+        "completionYear": "Aug 2018",
         "brief": "Sample brief text about Pre-University Cources education."
       },
       {
         "orderId": 3,
         "education": "Bachlor of Engineering in Computer Science | BE Cse | 10th",
         "institution": "Channabasaveshwara Institute of Technology - Gubbi",
-        "completionYear": "July 2022",
+        "completionYear": "Jul 2022",
         "brief": "Brief text about engineering and what we did there."
       }
     ],
     "workExp": [
       {
-        "orderId": 1,
+        "orderId": 4,
         "companyName": "Hexaware Technologies - Chennai",
         "designation": "Software Development Engineer in Test (SDET)",
         "jobDescription": "Automation and manual testing",
-        "startDate": "March 2022",
+        "startDate": "Mar 2022",
         "endDate": "",
         "isCurrent": true,
         "keyRespo": [
