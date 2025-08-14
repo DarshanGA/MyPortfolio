@@ -3,6 +3,7 @@ import data from "../data/content.json"
 import { ExperienceTimelineComponent } from "./experience-timeline/experience-timeline.component";
 import { EducationExperience } from '../models/EducationExperience.model';
 import { WorkExperience } from '../models/WorkExperience.model';
+
 @Component({
   selector: 'app-root',
   imports: [ExperienceTimelineComponent],
@@ -15,8 +16,8 @@ export class AppComponent {
   jobTitle = data.jobTitle;
   aboutMe = data.about;
   sectionTitles = data.sectionTitles;
-  educationExperience:EducationExperience[] = data.educationAndExperience.educationExp;
-  workExperience:WorkExperience[] = data.educationAndExperience.workExp;
+  educationExperience: EducationExperience[] = data.educationAndExperience.educationExp;
+  workExperience: WorkExperience[] = data.educationAndExperience.workExp;
 
   @ViewChild('pageTitle') pageTitle!: ElementRef;
   @ViewChild('scrollNavbar') scrollNavbar!: ElementRef;

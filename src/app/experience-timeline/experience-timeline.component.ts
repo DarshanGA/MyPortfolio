@@ -3,10 +3,11 @@ import { EducationTimelineCardComponent } from "../education-timeline-card/educa
 import { WorkExperienceCardComponent } from "../work-experience-card/work-experience-card.component";
 import { EducationExperience } from '../../models/EducationExperience.model';
 import { WorkExperience } from '../../models/WorkExperience.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-experience-timeline',
-  imports: [EducationTimelineCardComponent, WorkExperienceCardComponent],
+  imports: [EducationTimelineCardComponent, WorkExperienceCardComponent, CommonModule],
   templateUrl: './experience-timeline.component.html',
   styleUrl: './experience-timeline.component.scss'
 })

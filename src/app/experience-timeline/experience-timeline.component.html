@@ -6,8 +6,14 @@
 
       @for(j of workExp; track j.orderId){
 
-      <div class="custom-timeline-cont right-container mb-4">
-        <img src="workExpTimeLineIcon.jpg" class="timeline-node-left" />
+      <div class="custom-timeline-cont mb-4" 
+      [ngClass]="{
+            'offset-lg-6': j.orderId % 2 === 0,
+            'ps-lg-5': j.orderId % 2 === 0,
+            'pe-lg-5': !(j.orderId % 2 === 0)
+          }"
+          >
+        <!-- <img src="workExpTimeLineIcon.jpg" class="timeline-node-left" /> -->
         <app-work-experience-card
           [companyName]="j.companyName"
           [jobTitle]="j.designation"
@@ -23,8 +29,15 @@
         <!-- Education Timeline items -->
         @for(i of educExp; track i.orderId){
 
-        <div class="custom-timeline-cont left-container mb-4">
-          <img src="educationExpTimeLineIcon.jpg" class="timeline-node-right" />
+        <div
+          class="custom-timeline-cont mb-4"
+          [ngClass]="{
+            'offset-lg-6': i.orderId % 2 === 0,
+            'ps-lg-5': i.orderId % 2 === 0,
+            'pe-lg-5': !(i.orderId % 2 === 0)
+          }"
+        >
+          <!-- <img src="educationExpTimeLineIcon.jpg" class="timeline-node-right" /> -->
           <app-education-timeline-card
             [institutionName]="i.institution"
             [educLevel]="i.education"
