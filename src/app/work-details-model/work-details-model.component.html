@@ -1,0 +1,55 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  attr.id="workDetailModel_{{detailsId}}"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="workDetailModelLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" attr.id="workDetailModelLabel_{{detailsId}}">
+          {{ companyName }}
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h6>Key Responsibilities</h6>
+        <ol class="list-group list-group-numbered">
+          @for(res of keyResponsibilitie; track $index){
+
+            <li class="list-group-item">{{res}}</li>
+          }
+        </ol>
+        <hr class="divider" />
+        <h6>Key Contributions</h6>
+        <ol class="list-group list-group-numbered">
+          @for(con of keyContributions; track $index){
+
+            <li class="list-group-item">{{con}}</li>
+          }
+        </ol>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="col-8 text-start fw-bold text-danger">
+          <span> Jul 2020 - PRESENT </span>
+        </div>
+        <button
+          type="button"
+          class="btn btn-outline-light fw-bold"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
