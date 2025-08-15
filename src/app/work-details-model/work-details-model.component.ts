@@ -12,4 +12,5 @@ export class WorkDetailsModelComponent {
   @Input({required: true}) keyResponsibilitie!: string[];
   @Input({required: true}) keyContributions!: string[];
   @Input({required: true}) detailsId!: number;
+  @Input({required: true}) period!: string;
 }
