@@ -9,7 +9,7 @@
       @for(i of sampleResponsCount; track $index){
 
       <li class="list-group-item text-truncate">
-        - {{keyResponsibilities[$index]}}
+        - {{ keyResponsibilities[$index] }}
       </li>
       }
     </ul>
@@ -19,7 +19,12 @@
           <span> {{ startDate }} - {{ endDate }} </span>
         </div>
         <div class="col-4 text-end">
-          <button type="button" class="btn btn-outline-light fw-bold">
+          <button
+            type="button"
+            class="btn btn-outline-light fw-bold"
+            data-bs-toggle="modal"
+            attr.data-bs-target="#workDetailModel_{{expDetailId}}"
+          >
             More
           </button>
         </div>
@@ -27,3 +32,9 @@
     </div>
   </div>
 </div>
+<app-work-details-model
+  [companyName]="companyName"
+  [keyResponsibilitie]="keyResponsibilities"
+  [keyContributions]="keyContr"
+  [detailsId]="expDetailId"
+></app-work-details-model>

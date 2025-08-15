@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
+import { WorkDetailsModelComponent } from "../work-details-model/work-details-model.component";
 
 @Component({
   selector: 'app-work-experience-card',
-  imports: [],
+  imports: [WorkDetailsModelComponent],
   templateUrl: './work-experience-card.component.html',
   styleUrl: './work-experience-card.component.scss'
 })
@@ -15,4 +16,6 @@ export class WorkExperienceCardComponent {
   @Input({required: true}) keyResponsibilities:string[] = [];
   @Input({required: true}) startDate = "Month 0000";
   @Input({required: true}) endDate = "Month 9999";
+  @Input({required: true}) keyContr:string[] = [];
+  @Input({required: true}) expDetailId!:number;
 }
