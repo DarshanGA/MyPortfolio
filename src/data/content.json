@@ -55,7 +55,7 @@
           "Actively monitored application resources and backend workflows via Azure Portal during end-to-end testing."
         ],
         "keyContr": [
-          "Designed and implemented a reusable solution to manage the application's envirnoment data during automation execution",
+          "Designed and implemented a reusable solution to manage the application's envirnoment data during automation execution.",
           "Developing playwright framework to migrate the existing lagacy selenium automation scripts."
         ]
       }
